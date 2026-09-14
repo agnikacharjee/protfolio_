@@ -3,59 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGNIK ACHARJEE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Agnik Acharjee — Front-end Developer & 4th-year B.Tech CSBS student specializing in Full Stack Development.">
+    <meta name="theme-color" content="#000000">
+    <title>Agnik Acharjee — Front-end Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <!-- Grain texture overlay (desktop signature detail) -->
+    <div class="grain"></div>
+
+    <!-- Custom cursor (desktop / fine-pointer devices only, JS-gated) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <img class="image-gradient" src="gradient.png" alt="" aria-hidden="true">
     <div class="layer-blur"></div>
 
     <div class="container">
         <header>
-            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">A.A</h1>
-            <nav>
-                <a data-aos="fade-down" data-aos-duration="1500" href="https://agnikacharjee.github.io/skills-prot/" style="text-decoration: underline;">Skills</a>
-                <a data-aos="fade-down" data-aos-duration="2000" href="http://127.0.0.1:3000/p.html" style="text-decoration: underline;">Projects</a>
-                <a data-aos="fade-down" data-aos-duration="2500" href="http://127.0.0.1:3000/e.html" style="text-decoration: underline;">education</a>
-                <a data-aos="fade-down" data-aos-duration="3000" href="http://127.0.0.1:3000/ig.html" style="text-decoration: underline;">interests & goals</a>
-                <a data-aos="fade-down" data-aos-duration="1200" href="http://127.0.0.1:3000/ah.html" style="text-decoration: underline;">Academic Highlights</a>
+            <a href="#top" class="logo" aria-label="Agnik Acharjee home">A.A</a>
+
+            <nav class="nav-desktop" aria-label="Primary">
+                <a href="https://agnikacharjee.github.io/skills-prot/">Skills</a>
+                <a href="http://127.0.0.1:3000/p.html">Projects</a>
+                <a href="http://127.0.0.1:3000/e.html">Education</a>
+                <a href="http://127.0.0.1:3000/ig.html">Interests &amp; Goals</a>
+                <a href="http://127.0.0.1:3000/ah.html">Academic Highlights</a>
             </nav>
-            <button data-aos="fade-down" data-aos-duration="1500" class="btn-signing"><a href="http://127.0.0.1:3000/aboutme.html">About Me</a></button>
+
+            <button class="btn-signing btn-signing--desktop"><a href="http://127.0.0.1:3000/aboutme.html">About Me</a></button>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </header>
-        <main>
+
+        <!-- Mobile full-screen nav overlay -->
+        <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile" aria-hidden="true">
+            <a href="https://agnikacharjee.github.io/skills-prot/" style="--i:0">Skills</a>
+            <a href="http://127.0.0.1:3000/p.html" style="--i:1">Projects</a>
+            <a href="http://127.0.0.1:3000/e.html" style="--i:2">Education</a>
+            <a href="http://127.0.0.1:3000/ig.html" style="--i:3">Interests &amp; Goals</a>
+            <a href="http://127.0.0.1:3000/ah.html" style="--i:4">Academic Highlights</a>
+            <a href="http://127.0.0.1:3000/aboutme.html" class="nav-mobile__cta" style="--i:5">About Me</a>
+        </nav>
+
+        <main id="top">
             <div class="content">
-                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="" data-aos-offset="0" data-aos-duration="3500"
+                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-offset="0" data-aos-duration="1500"
                     class="tag-box">
                     <div class="tag">Front-end Developer</div>
                 </div>
-                <h1 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="3500" >AGNIK<br>ACHARJEE</h1>
-                <P data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="3500" class="description">I am a dedicated and enthusiastic 4th-year B.Tech student <br>in <span>Computer
-                        Science and
-                        Business System </span><br>with a keen interest in <span>Full Stack Development.</span> </P>
+                <h1 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-offset="0" data-aos-duration="1500">
+                    <span class="name-line" data-text="AGNIK">AGNIK</span><br>
+                    <span class="name-line" data-text="ACHARJEE">ACHARJEE</span>
+                </h1>
+                <p data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="1500" class="description">
+                    I am a dedicated and enthusiastic 4th-year B.Tech student
+                    in <span>Computer Science and Business Systems</span>
+                    with a keen interest in <span>Full Stack Development.</span>
+                </p>
                 <div class="buttons"></div>
             </div>
         </main>
-        <spline-viewer data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="3500" class="robot-3d"
+
+        <spline-viewer data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="1500" class="robot-3d"
             url="https://prod.spline.design/NmEWpJxTA-wJ2F6q/scene.splinecode"></spline-viewer>
+
         <footer>
             <div class="l">
-                <a href="#" class="b1">Email- agnikacharjee0@gmail.com</a>
-                <div class="b2">Phone no: +91 7980796768</div> 
-                <a class="b3" href="https://github.com/agnikacharjee/agnik-protfolio">Github</a>
-                <a class="b4" href="https://www.linkedin.com/in/agnik-acharjee-008017379?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BK22WhS4gRiaAXNWRtPLU2g%3D%3D">Linkedln</a>
-
+                <a href="mailto:agnikacharjee0@gmail.com" class="b1">agnikacharjee0@gmail.com</a>
+                <div class="b2">+91 7980796768</div>
+                <a class="b3" href="https://github.com/agnikacharjee/agnik-protfolio" target="_blank" rel="noopener">GitHub</a>
+                <a class="b4" href="https://www.linkedin.com/in/agnik-acharjee-008017379" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </footer>
     </div>
+
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.48/build/spline-viewer.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({ once: true });
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
-
